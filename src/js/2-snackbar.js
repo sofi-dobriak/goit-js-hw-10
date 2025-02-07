@@ -13,10 +13,6 @@ refs.form.addEventListener('submit', e => {
     'input[name="state"]:checked'
   )?.value;
 
-  if (!stateInput) {
-    return;
-  }
-
   createPromise(stateInput, delayInput)
     .then(delay => onFulfilled(delay))
     .catch(delay => onRejected(delay));
